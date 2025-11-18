@@ -145,40 +145,41 @@
             opacity: 0.9;
         }
 
-        .cta-button {
-            font-family: 'Cinzel', serif;
-            font-size: 1.2rem;
+        .email-link {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
             color: #d4af37;
-            background: transparent;
-            border: 1px solid rgba(212, 175, 55, 0.5);
-            padding: 15px 40px;
+            text-decoration: none;
+            padding: 15px 30px;
             border-radius: 30px;
-            cursor: pointer;
             transition: all 0.4s ease;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             position: relative;
             overflow: hidden;
             z-index: 1;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: rgba(10, 10, 20, 0.3);
         }
 
-        .cta-button::before {
+        .email-link::before {
             content: '';
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
             transition: all 0.6s ease;
             z-index: -1;
         }
 
-        .cta-button:hover {
+        .email-link:hover {
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-            border-color: rgba(212, 175, 55, 0.8);
+            border-color: rgba(212, 175, 55, 0.6);
+            transform: translateY(-2px);
         }
 
-        .cta-button:hover::before {
+        .email-link:hover::before {
             left: 100%;
         }
 
@@ -239,6 +240,11 @@
                 padding: 0 20px;
             }
             
+            .email-link {
+                font-size: 1.3rem;
+                padding: 12px 25px;
+            }
+            
             .nebula-cloud {
                 filter: blur(40px);
             }
@@ -274,7 +280,7 @@
     <div class="container">
         <h1 class="logo">ISLANDDARK</h1>
         <p class="tagline">Where cosmic rarity meets earthly elegance. A journey beyond the stars awaits.</p>
-        <button class="cta-button">ENTER THE NEBULA</button>
+        <a href="mailto:contact@islanddark.com" class="email-link">contact@islanddark.com</a>
         
         <div class="footer">
             &copy; 2023 ISLANDDARK.COM | THE COSMIC COLLECTION
